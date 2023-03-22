@@ -1,0 +1,22 @@
+.chatContainer{
+    padding:0.5rem;
+}
+.chat-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:0rem 0.5rem;
+    margin-left: 0.7rem;
+}
+.user-details{
+    display: flex;
+    align-items: center;
+}
+.profile-pic img{
+    width:4rem;
+    border-radius: 20rem;
+
+}
+.username h3{
+    color:white;
+}

@@ -1,0 +1,75 @@
+.main-contact{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: rgb(17, 9, 41);
+}
+.contact{
+    overflow-x: hidden;
+    border-radius: 0.6rem;
+    margin:0rem 0.5rem;
+    height:33rem;
+}
+.contact::-webkit-scrollbar {
+    width: 0.4rem;
+}
+.contact::-webkit-scrollbar-thumb {
+    background-color: rgba(152, 84, 230, 0.349);
+    border-radius: 5rem;
+}
+.contact-title{
+    color:white;
+    padding: 1.5rem;
+    font-size: 2rem;
+}
+.contact-fix{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.contacts{
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff39;
+    margin:0.9rem 0.9rem 1.5rem 0.9rem;
+    padding:0.8rem;
+    min-height: 0.5rem;
+    overflow: hidden;
+    border-radius: 0.4rem;
+}
+.selected{
+    transition: 0.2s ease-in-out;
+    background-color: rgba(146, 59, 245, 0.808);
+}
+.contacts:hover{
+    background-color: #c28effa8;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+.contact-profile img{
+    width:3rem;
+    border-radius: 50rem;
+}
+.contact-name{
+    font-size: 1.5rem;
+    color:white;
+    padding: 0.5rem 0.8rem;
+    margin-left:0.5rem;
+    font-weight: 600;
+}
+.currentUser{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* border: 1px solid white; */
+    background-color: rgb(24, 1, 51);
+    padding:0.5rem;
+}
+.profile img{
+    width:4rem;
+    border-radius: 50rem;
+}
+.username{
+    color:white;
+    padding:2rem;
+}
