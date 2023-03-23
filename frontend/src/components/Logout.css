@@ -4,14 +4,14 @@
     align-items: center;
     padding:0rem 0.5rem;
     border-radius: 0.5rem;
-    background-color: rgba(146, 59, 245, 0.808);
+    background-color: rgba(170, 101, 248, 0.945);
     cursor: pointer;
     height:2.4rem;
 }
 .logout:hover{
     color: rgb(146, 11, 236);
 }
-svg{
+.logout>svg{
     font-size: 1.4rem;
     color: white;
 }

@@ -60,7 +60,6 @@ function Login(){
         notification1(data.error)
       }else{
         notification2(data.message);
-        console.log(data.token);
         localStorage.setItem("jwt",data.token);
         localStorage.setItem("user",JSON.stringify(data.user));
         navigate('/');
@@ -80,7 +79,7 @@ function Login(){
   return (
     <>
     <div className="login register">
-        <form>
+        <form className="form">
             <div className="header">
                 <img src="" alt="" />
                 <h1 style={{fontSize:"3rem", color:"white",paddingBottom:"1rem"}}>ChatUs</h1>
@@ -93,7 +92,7 @@ function Login(){
                 <span onClick={()=>showIcon()}>{show?<BsFillEyeSlashFill style={{color:"white", fontSize:"1.2rem", margin:"0.8rem",cursor:"pointer"}}/>:<BsFillEyeFill style={{color:"white", fontSize:"1.2rem", margin:"0.8rem",cursor:"pointer"}}/>}</span>
             </div>
             
-            <button onClick={(e)=>{e.preventDefault();postData()}}>LOGIN</button>
+            <button className="button" onClick={(e)=>{e.preventDefault();postData()}}>LOGIN</button>
 
             <span style={{fontSize:"1.1rem", color:"white",paddingBottom:"0rem"}}>Don't have an account ? ? <Link to='/register' style={{color:"grey"}}>Register</Link></span>
         </form>

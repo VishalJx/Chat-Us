@@ -97,7 +97,7 @@ function Register(){
   return (
     <>
     <div className="register">
-        <form>
+        <form className="form">
             <div className="header">
                 <img src="" alt="" />
                 <h1 style={{fontSize:"3rem", color:"white",paddingBottom:"1rem"}}>ChatUs</h1>
@@ -117,7 +117,7 @@ function Register(){
                 <span onClick={()=>showIcon2()}>{show2?<BsFillEyeSlashFill style={{color:"white", fontSize:"1.2rem", margin:"0.8rem",cursor:"pointer"}}/>:<BsFillEyeFill style={{color:"white", fontSize:"1.2rem", margin:"0.8rem",cursor:"pointer"}}/>}</span>
             </div> 
 
-            <button onClick={(e)=>handleSubmit(e)}>REGISTER</button>
+            <button className="button" onClick={(e)=>handleSubmit(e)}>REGISTER</button>
 
             <span style={{fontSize:"1.1rem", color:"white",paddingBottom:"0rem"}}>Already have an account ? <Link to='/login' style={{color:"grey"}}>Login</Link></span>
         </form>
