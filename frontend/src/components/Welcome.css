@@ -18,6 +18,7 @@
 }
 img{
     width: 24rem;
+    z-index: 0;
 }
 span{
     color: blue;

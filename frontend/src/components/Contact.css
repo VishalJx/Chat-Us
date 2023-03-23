@@ -47,7 +47,11 @@
 }
 .contact-profile img{
     width:3rem;
+    height:3rem;
+    object-fit: contain;
     border-radius: 50rem;
+    border: 1px solid grey;
+    background-color: white;
 }
 .contact-name{
     font-size: 1.5rem;
@@ -66,7 +70,10 @@
 }
 .profile img{
     width:4rem;
+    object-fit: contain;
     border-radius: 50rem;
+    border: 1px solid grey;
+    background-color: white;
 }
 .username{
     color:white;

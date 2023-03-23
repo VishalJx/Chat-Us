@@ -1,10 +1,12 @@
 import React,{useState, useEffect} from "react";
+import ProfilePic from "./ProfilePic";
 import "./Contact.css";
 
 function Contacts({data, changeChat}){
   const [currentUserName , setCurrentUserName] = useState(undefined);
   const [currentUserImage, setCurrentUserImage] = useState(undefined);
   const [currentSelected, setCurrentSelected] = useState(undefined);
+  const [profile, setProfile] = useState(false);
 
   useEffect(()=>{
     const currentUserData = JSON.parse(
@@ -12,11 +14,21 @@ function Contacts({data, changeChat}){
     );
     setCurrentUserName(currentUserData.username)
     setCurrentUserImage(currentUserData.profile);
+    console.log(currentUserImage);
   },[])
 
   const changeCurrentChat=(index, contact)=>{
     setCurrentSelected(index);
     changeChat(contact);
+  };
+
+  const changeProfile=()=>{
+    if(profile){
+      setProfile(false);
+    }else{
+      setProfile(true)
+    }
+    console.log(profile)
   }
 
   return (
@@ -49,12 +61,15 @@ function Contacts({data, changeChat}){
         )}
         <div className="currentUser">
           <div className="profile">
-            <img src={currentUserImage} alt="" />
+            <img src={currentUserImage} onClick={changeProfile} alt="" />
           </div>
           <div className="username">
             <h2>{currentUserName}</h2>
           </div>
         </div>
+            {
+              profile && <ProfilePic changeProfile={changeProfile}/>
+            }
     </div>
   )
 };

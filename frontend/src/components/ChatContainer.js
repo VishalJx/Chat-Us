@@ -70,7 +70,6 @@ useEffect(()=>{
   scrollRef.current?.scrollIntoView({behaviour:"smooth"});
 },[messages])
 
-
   return (
     <>{
         currentChat && (   //further content will be loaded only after the currentChat data is loaded otherwise white screen is show

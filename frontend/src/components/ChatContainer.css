@@ -17,9 +17,8 @@
     align-items: center;
 }
 .profile-pic img{
-    width:4rem;
+    width:3rem;
     border-radius: 20rem;
-
 }
 .username h3{
     color:white;
