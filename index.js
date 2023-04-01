@@ -7,21 +7,32 @@ const mongoose = require("mongoose");
 require("./mongoDB");
 require("./models/userModel")
 app.use(cors());
-
+const path = require("path");
+const PORT = process.env.PORT||5000
 
 app.use(express.json());
 app.use(require("./routes/auth.js"));
 app.use(require("./routes/userRoutes"));
 app.use(require("./routes/messagesRoute"));
 
+app.use(express.static(path.join(__dirname, "./frontend/build")))
+app.get('*',(req,resp)=>{
+    resp.sendFile(
+        path.join(__dirname,'./frontend/build/index.html'),
+        function (err){
+            resp.status(500).send(err)
+        }
+            
+    )
+})
 
-const server = app.listen(process.env.PORT,(req,resp)=>{
+const server = app.listen(PORT,(req,resp)=>{
     console.log(`Server running on port http://localhost:${process.env.PORT}`)
 });
 
 const io = socket(server,{
     cors:{
-        origin:"http://localhost:3000",
+        origin:"*",
         credentials:true,
     },
 });

@@ -7,10 +7,6 @@ const jwt = require('jsonwebtoken');
 const jwt_secret = process.env.JWT_SECRET;
 const userControl = require("../controller/userControl");
 
-router.get("/",(req,resp)=>{
-    resp.send("hello");
-})
-
 router.post("/register",(req,resp)=>{
     const {email, username, password} = req.body;
     if(!email ||!username || !password){

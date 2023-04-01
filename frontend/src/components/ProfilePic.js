@@ -48,14 +48,14 @@ function ProfilePic({changeProfile}){
         if(image){
             postDetails();
         }
-    },[image])
+    },[])
 
     useEffect(()=>{
         if(url){
             postPic();
         }
 
-    },[url])
+    },[])
 
   return (
     <div className="darkBg">

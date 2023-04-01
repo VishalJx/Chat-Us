@@ -1,0 +1,59 @@
+.register {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #141427;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(11, 13, 24);
+    gap: 2rem;
+    border-radius: 2rem;
+    padding: 2rem 4rem;
+}
+
+.form input {
+    background-color: transparent;
+    border-radius: 0.8rem;
+    padding: 0.8rem;
+    border: 0.2rem solid rgb(12, 4, 148);
+    width: 100%;
+    font-size: 1rem;
+    color: white;
+}
+
+.form input:focus {
+    outline: none;
+    /* to disable focus border of input tag*/
+}
+
+.style input {
+    border: none;
+}
+
+.style {
+    border: 0.2rem solid rgb(12, 4, 148);
+    border-radius: 0.8rem;
+}
+
+.button {
+    color: white;
+    background: none;
+    border: none;
+    font-size: 1rem;
+    font-weight: 700;
+    border-radius: 0.5rem;
+    background-color: rgb(158, 13, 202);
+    padding: 0.5rem 5rem;
+    margin-top: 1rem;
+}
+
+.button:hover {
+    background-color: rgb(108, 3, 139);
+}

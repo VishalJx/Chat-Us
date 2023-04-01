@@ -41,7 +41,7 @@ function Chats(){
 
   useEffect(()=>{
     if(currentUser){
-      socket.current = io("http://localhost:3000");
+      socket.current = io("http://localhost:5000");
       socket.current.emit("add-user", currentUser._id);
     }
   },[currentUser]);

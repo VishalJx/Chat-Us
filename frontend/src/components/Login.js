@@ -3,12 +3,12 @@ import { BsFillEyeFill,BsFillEyeSlashFill } from "react-icons/bs";
 import { Link } from "react-router-dom";
 import { toast } from "react-toastify";
 import {useNavigate} from "react-router-dom";
+import "./Login.css";
 
 
 function Login(){
     const navigate = useNavigate();
     const [show, setShow] = useState(false);
-    const [show2, setShow2] = useState(false);
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
 
@@ -71,9 +71,6 @@ function Login(){
     // ----to show and hide password----
     const showIcon=()=>{
         setShow(!show)
-    }
-    const showIcon2=()=>{
-    setShow2(!show2)
     }
 
   return (

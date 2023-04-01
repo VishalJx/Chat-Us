@@ -9,12 +9,13 @@ function Contacts({data, changeChat}){
   const [profile, setProfile] = useState(false);
 
   useEffect(()=>{
-    const currentUserData = JSON.parse(
+  (async()=>{
+      const currentUserData = await JSON.parse(
       localStorage.getItem("user")
     );
     setCurrentUserName(currentUserData.username)
     setCurrentUserImage(currentUserData.profile);
-    console.log(currentUserImage);
+    })();
   },[])
 
   const changeCurrentChat=(index, contact)=>{
