@@ -41,7 +41,7 @@ function Chats(){
 
   useEffect(()=>{
     if(currentUser){
-      socket.current = io("*");
+      socket.current = io("https://chat-us.onrender.com/");
       socket.current.emit("add-user", currentUser._id);
     }
   },[currentUser]);
