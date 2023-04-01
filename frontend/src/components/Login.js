@@ -45,7 +45,7 @@ function Login(){
       return        //to not to execute further
     }
     //Sending data to server
-    fetch("http://localhost:5000/login",{
+    fetch("/login",{
       method:'post',
       headers:{
         "Content-Type":"application/json"

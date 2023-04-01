@@ -28,7 +28,7 @@ function Chats(){
       })();
 
     //fetching data of contacts
-    fetch(`http://localhost:5000/users`,{
+    fetch(`/users`,{
       headers:{
         "Content-Type":"application/json",
         "Authorization":""+localStorage.getItem("jwt")
@@ -41,7 +41,7 @@ function Chats(){
 
   useEffect(()=>{
     if(currentUser){
-      socket.current = io("http://localhost:5000");
+      socket.current = io("*");
       socket.current.emit("add-user", currentUser._id);
     }
   },[currentUser]);

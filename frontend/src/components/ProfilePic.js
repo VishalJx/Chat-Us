@@ -28,7 +28,7 @@ function ProfilePic({changeProfile}){
 
     const postPic=()=>{
         //saving post to mongodb
-            fetch("http://localhost:5000/uploadProfile",{
+            fetch("/uploadProfile",{
             method:'put',
             headers:{
                 "Content-Type":"application/json",

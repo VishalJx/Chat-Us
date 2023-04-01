@@ -31,7 +31,7 @@ function ChatContainer({currentChat, currentUser, socket}){
 
   //Sending message data...
     const handleSendMsg=async(msg)=>{
-    await fetch("http://localhost:5000/addmsg", {
+    await fetch("/addmsg", {
     method: "post",
     body: JSON.stringify({
         from : currentUser._id,
